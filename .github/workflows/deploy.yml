@@ -19,6 +19,4 @@ jobs:
         run: npm install -g wrangler
 
       - name: Deploy to Cloudflare Workers
-        run: |
-          wrangler login --api-token ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          wrangler publish
+        run: wrangler publish --api-token ${{ secrets.CLOUDFLARE_API_TOKEN }}
